@@ -55,13 +55,13 @@ public class AutoClicker {
 				Thread.sleep(1);
 				Random random = new Random();
 				if (delay == -1)
-					delay = random.nextInt((1000 / minCPS) - (1000 / maxCPS) + 1) + (1000 / maxCPS);
+					delay = random.nextInt((2000 / minCPS) - (2000 / maxCPS) + 1) + (2000 / maxCPS);
 
 				if (activated && toggled && !gui.focused) {
 					if (System.currentTimeMillis() - lastTime >= delay) {
 						click();
 						lastTime = System.currentTimeMillis();
-						delay = random.nextInt((1000 / minCPS) - (1000 / maxCPS) + 1) + (1000 / maxCPS);
+						delay = random.nextInt((2000 / minCPS) - (2000 / maxCPS) + 1) + (2000 / maxCPS);
 					}
 				}
 			}
